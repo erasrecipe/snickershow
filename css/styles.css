@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Special+Elite&family=Caveat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Vintage Theme */
+    --primary: #8B7355;
+    --primary-dark: #5D4E37;
+    --primary-light: #C4B59D;
+    --gradient: linear-gradient(135deg, #8B7355 0%, #5D4E37 100%);
+    
+    /* Neutral Colors */
+    --bg: #0F0F0F;
+    --surface: #1A1A1A;
+    --card-bg: #F4E4C1;
+    --text: #FFFFFF;
+    --text-dark: #3D3425;
+    --border: #333333;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--gradient);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(139, 115, 85, 0.3);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    opacity: 0.95;
+}
+
+/* Main Content Grid */
+.main-content {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 2rem;
+}
+
+/* Control Panel */
+.control-panel {
+    background: var(--surface);
+    border-radius: 20px;
+    padding: 2rem;
+    height: fit-content;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.control-panel h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Section */
+.section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.2);
+}
+
+.input-group input.signature-input {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+}
+
+/* Photo Upload */
+.photo-upload {
+    text-align: center;
+}
+
+.btn-upload {
+    width: 100%;
+    padding: 1rem;
+    background: var(--gradient);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-upload:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(139, 115, 85, 0.4);
+}
+
+.upload-hint {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.btn-download {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: var(--gradient);
+    color: white;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-tertiary {
+    background: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--border);
+}
+
+.btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Preview Panel */
+.preview-panel {
+    background: var(--surface);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 2rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+}
+
+.preview-panel h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+/* ===================================
+   VINTAGE LICENSE CARD STYLES
+   =================================== */
+
+.id-card {
+    width: 600px;
+    min-height: 400px;
+    perspective: 1000px;
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
+}
+
+.card-front.vintage-license {
+    width: 100%;
+    min-height: 400px;
+    background: linear-gradient(145deg, #F5E6C8 0%, #E8D4A8 30%, #DEC896 60%, #D4BE8A 100%);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 
+        inset 0 0 60px rgba(139, 115, 85, 0.15),
+        inset 0 0 100px rgba(0, 0, 0, 0.05);
+}
+
+/* Vintage paper texture overlay */
+.card-front.vintage-license::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Stars Border */
+.stars-border {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    pointer-events: none;
+}
+
+.stars-top, .stars-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stars-top {
+    top: 0;
+}
+
+.stars-bottom {
+    bottom: 0;
+}
+
+.stars-left, .stars-right {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stars-left {
+    left: 0;
+}
+
+.stars-right {
+    right: 0;
+}
+
+.stars-top::before, .stars-bottom::before {
+    content: '★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★';
+    font-size: 10px;
+    color: #5D4E37;
+    letter-spacing: 4px;
+    white-space: nowrap;
+}
+
+.stars-left::before, .stars-right::before {
+    content: '★\A★\A★\A★\A★\A★\A★\A★\A★\A★\A★\A★\A★\A★\A★';
+    font-size: 10px;
+    color: #5D4E37;
+    white-space: pre;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* License Content */
+.license-content {
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    height: 100%;
+}
+
+/* License Header */
+.license-header {
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(93, 78, 55, 0.3);
+}
+
+.license-title {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #3D3425;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.license-number {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #3D3425;
+    letter-spacing: 1px;
+}
+
+.license-number span {
+    font-weight: 700;
+}
+
+/* License Body */
+.license-body {
+    display: flex;
+    gap: 20px;
+}
+
+/* Photo Section */
+.license-photo-section {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.license-photo-frame {
+    width: 120px;
+    height: 150px;
+    background: #F8F4E8;
+    border: 2px solid #C4B59D;
+    padding: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.license-photo-frame .photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #F0EAD6, #E8E0CC);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #8B7355;
+    font-size: 0.7rem;
+    font-family: 'Special Elite', monospace;
+}
+
+.license-photo-frame .photo-placeholder span {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.license-photo-frame .photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-caption {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.55rem;
+    color: #5D4E37;
+    margin-top: 8px;
+    text-align: center;
+    max-width: 120px;
+}
+
+/* License Info Section */
+.license-info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.license-field {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #3D3425;
+    line-height: 1.4;
+    display: flex;
+    align-items: baseline;
+}
+
+.field-label {
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.field-dots {
+    flex: 1;
+    position: relative;
+    margin-left: 5px;
+    border-bottom: 1px dotted #8B7355;
+    height: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.field-value {
+    font-weight: 400;
+    color: #3D3425;
+    background: transparent;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    padding-bottom: 2px;
+    padding-left: 3px;
+}
+
+/* License Text Block */
+.license-text-block {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(93, 78, 55, 0.2);
+}
+
+.license-text-title {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #3D3425;
+    text-align: center;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+.license-text-body {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.6rem;
+    color: #5D4E37;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+.license-text-important {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #3D3425;
+    text-align: center;
+    margin: 5px 0;
+    text-decoration: underline;
+}
+
+/* Signature */
+.license-signature {
+    margin-top: auto;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.signature-line {
+    display: block;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    color: #2D2418;
+    min-height: 25px;
+    border-bottom: 1px solid #5D4E37;
+    margin-bottom: 3px;
+}
+
+.signature-caption {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.5rem;
+    color: #5D4E37;
+    font-style: italic;
+}
+
+/* CMIYGL Stamp */
+.cmiygl-stamp {
+    position: absolute;
+    bottom: 60px;
+    right: 50px;
+    transform: rotate(-15deg);
+    border: 3px solid #4A8BAD;
+    border-radius: 8px;
+    padding: 8px 12px;
+    opacity: 0.7;
+}
+
+.cmiygl-stamp span {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.6rem;
+    color: #4A8BAD;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Preview Hint */
+.preview-hint {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+}
+
+.disclaimer {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.disclaimer a {
+    color: var(--primary);
+}
+
+/* Scrollbar Styling for Preview Panel */
+.preview-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.preview-panel::-webkit-scrollbar-track {
+    background: var(--bg);
+    border-radius: 10px;
+}
+
+.preview-panel::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.preview-panel::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .preview-panel {
+        position: relative;
+        top: 0;
+        max-height: none;
+        order: -1;
+    }
+    
+    .id-card {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .control-panel {
+        padding: 1.5rem;
+    }
+    
+    .id-card {
+        width: 100%;
+    }
+    
+    .card-front.vintage-license {
+        padding: 15px;
+        min-height: 350px;
+    }
+    
+    .license-body {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .license-photo-section {
+        margin-bottom: 15px;
+    }
+    
+    .license-title {
+        font-size: 0.9rem;
+    }
+    
+    .cmiygl-stamp {
+        bottom: 40px;
+        right: 30px;
+    }
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 2s infinite;
+}

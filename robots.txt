@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://snickershow.store/sitemap.xml
+
+# Block search engines from indexing assets folder (optional)
+Disallow: /css/
+Disallow: /js/

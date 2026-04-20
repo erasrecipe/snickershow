@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Travel Stamp Creator | SnickerShow</title>
+    <meta name="description" content="Create your own vintage travel stamps with custom text and style. Free online generator.">
+    <link rel="canonical" href="https://snickershow.store/tools/stamp-creator.html">
+    <meta name="theme-color" content="#FF6B9D">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📞</text></svg>">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/">
+                    <span class="logo-icon">📞</span>
+                    <span class="logo-text">SnickerShow</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="privacy.html" class="nav-link">Privacy</a>
+                <a href="disclaimer.html" class="nav-link">Disclaimer</a>
+                <a href="tools/stamp-creator.html" class="nav-link active">Travel Stamp</a>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="title">✈️ Vintage Travel Stamp Creator</h1>
+            <p class="subtitle">Design your own unique travel stamps!</p>
+        </header>
+
+        <div class="main-content">
+            <div class="tool-container">
+                <h2>Customize Your Stamp</h2>
+                <div id="stampCustomization">
+                    <div class="input-group">
+                        <label for="stampText">Stamp Text (e.g., WANDERLUST):</label>
+                        <input type="text" id="stampText" placeholder="Enter text" value="ADVENTURE">
+                    </div>
+                    <div class="input-group">
+                        <label for="stampColor">Stamp Color:</label>
+                        <input type="color" id="stampColor" value="#cc0000">
+                    </div>
+                    <div class="input-group">
+                        <label for="stampShape">Shape:</label>
+                        <select id="stampShape">
+                            <option value="circle">Circle</option>
+                            <option value="rectangle">Rectangle</option>
+                            <option value="oval">Oval</option>
+                        </select>
+                    </div>
+                    <button id="generateStampBtn" class="btn-tool">Generate Stamp</button>
+                </div>
+
+                <div id="stampPreviewContainer">
+                    <h2>Preview</h2>
+                    <canvas id="stampCanvas" width="400" height="400"></canvas>
+                    <br>
+                    <button id="downloadStampBtn" class="btn-download btn-primary" disabled>Download Stamp (PNG)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SnickerShow</h3>
+                    <p>Free creative tools for everyone.</p>
+                    <p class="creator">Built by <strong>Mehrab Musa</strong><br>Self-Made Coder</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <a href="/">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                    <a href="tools/persona-generator.html">CMIYGL Persona</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <a href="tools/stamp-creator.html" class="footer-tool-link">Travel Stamp Creator</a>
+                    <a href="album-art-filter.html">Album Art Filter</a>
+                    <a href="playlist-name-generator.html">Playlist Name Generator</a>
+                    <a href="quote-generator.html">Quote Generator</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Share your creations!</p>
+                    <p class="hashtag">#SnickerShow #CMIYGL</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SnickerShow.store | Created by Mehrab Musa</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/navigation.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="js/stamp-creator.js"></script> <!-- New JS file for the stamp tool -->
+</body>
+</html>
